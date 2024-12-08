@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./newlife.css">
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons (optional) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new life trees</title>
+</head>
+ <body>
+
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="./vivek.png" width="250px" height="50px"  alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    All Product
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  
+           <a class="dropdown-item" href="#Enderanged-Trees">Enderanged trees</a>
+           <a class="dropdown-item" href="#Garden-Plants">Garden Plants</a>
+           <a class="dropdown-item" href="#Tree-Seeds">Tree Seeds</a>
+           <a class="dropdown-item" href="#Meditional-Trees">Meditional Trees</a>
+           <a class="dropdown-item" href="#Organic-Manure">Organic Manure</a>
+           <a class="dropdown-item" href="#Country-Vegitable-Seeds">Country Vegitable Seeds</a>
+           <a class="dropdown-item" href="#Expensive-Trees">Expensive Trees</a>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="document.getElementsByClassName('outer-upload')[0].style.display='block'" href="#">Upload Products</a>
+              </li>
+              <li class="nav-item" onclick="document.getElementById('cart-main').style.display='block'">
+                <a class="nav-link" href="#">Cart :<span id="cart-count" style="color: white;"> 0</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./Aboutus.html">About Us</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="bi bi-person"></i> Sign Up</a>
+              </li>
+              <li onclick="document.getElementsByClassName('logbox')[0].style.display = 'block'" class="nav-item">
+                <a class="nav-link" href="#"><i class="bi bi-box-arrow-in-right"></i> Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <hr>
+   <!-- upload products -->
+      <div class="outer-upload">
+        <center>
+<div class="main-upload">
+
+    <form action="#" onsubmit="uploadProduct(event); return false;">
+        <div style="display: flex; justify-content:start;">
+        <i class="fa-solid fa-circle-xmark" onclick="document.getElementsByClassName('outer-upload')[0].style.display='none'" style="font-size:xx-large;"></i>
+    </div>
+        <h1>Upload Products</h1>
+        <label for="select"><b>Select The Section :</b></label>
+        <select name="options" id="select-product">
+            <option value="">Select</option>
+            <option value="0">Enderanged Trees</option>
+            <option value="1">Garden Plants</option>
+            <option value="2">Tree Seeds</option>
+            <option value="3">Meditional Trees</option>
+            <option value="4">Organic Manure</option>
+            <option value="5">Country Vegitable Seeds</option>
+            <option value="6">Expensive Trees</option>
+        </select>
+        <br><br>
+        <input type="file" id="imageInput" accept="image/*">
+        <br><br>
+    <label  for="text">Title</label><br>
+    <input class="upload-title" placeholder="Enter Your Product Title" type="text">
+    <br>
+   <label for="text">Location</label><br>
+   <input class="upload-location" placeholder="Enter your location" type="text">
+   <br>
+   <label for="text">Price</label><br>
+   <input class="upload-price" placeholder="Enter your Product Price" type="number">
+   <div><button onclick="uploadProduct(event)" class="upload-btn">Submit</button></div>
+</form>
+</div>
+</center>
+</div>
+</center>
+
+
+
+<!-- add to cart -->
+<div class="cart-box" id="cart-main">
+    <center>
+    <div class="cart-main">
+        <div class="cart-head">
+            <i style="font-size: xx-large; padding: 5px;" onclick="document.getElementById('cart-main').style.display='none'" class="fa-regular fa-circle-xmark"></i>
+<img src="./images-7 copy.png" class="head-img" alt="">
+<i></i>
+        </div>
+        <!-- cart products -->
+        <!-- <div class="cart-product">
+<img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="cart-img" alt="">
+<div class="cart-details">
+    <h3 class="cart-title">chedi</h3>
+    <p class="cart-price">Rs:23</p>
+    <input type="number" value="1" >
+</div>
+<i class="fa-solid fa-trash" style="font-size: xx-large; padding-top: 20px;"></i>
+        </div>
+        <b><hr style="margin-top: 5px; margin-top: 5px;"></b> -->
+    
+        <div class="inner"></div>
+        <div class="total-head" style="display: flex; justify-content: space-evenly;"><button class="total-btn">Place Order</button> <h3 id="total">Total : </h3></div>
+    </div>
+    
+</center>
+</div>
+
+    <!-- zoom in login -->
+   <div style="display: flex; justify-content: center;" class="col col-logbox">
+        <div class="logbox" id="logbox">
+           
+            <i style="display:flex ; justify-content: end;font-size:larger;" onclick="document.getElementsByClassName('logbox')[0].style.display = 'none'" class="fa-regular fa-circle-xmark"></i>
+            <div style="display:flex ;justify-content: center;"><img src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png" width="100px" alt=""></div>
+<!-- form -->
+<form action="#" onclick="console.log('viv')" class="animate">
+    <label for="username">UserName</label><br>
+    <input type="text" id="username" name="username" placeholder="Enter the UserName" required><br><br>
+    
+    <label for="password">Password</label><br>
+    <input type="password" id="password" name="password" placeholder="Enter the password" required><br><br>
+    
+    <button type="submit" class="log-btn"><a href="#">Login</a></button><br>
+    
+    <input type="checkbox" id="checkbox" name="checkbox">
+    <label for="checkbox">Remainder</label>
+</form>  
+           <div class="log-end">
+            <button 
+            onclick="document.getElementsByClassName('logbox')[0].style.display = 'none'" 
+            style="background-color: red; color: white; width:auto;height: auto; padding: 7px; padding-left: 10px; padding-right: 10px; border-style: none;">
+            Cancel
+        </button>
+        
+   <a href="#">Forget Password</a>
+</div>
+        </div>
+    </div>
+
+
+<!-- seacrch bar -->
+    <center >
+        <div class="search">
+            <input type="text"placeholder="Type your text">
+            <button >
+              Search
+            </button>
+        </div>
+</center>
+
+<!-- carocel -->
+<!-- <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel"> -->
+    <!-- <div class="carousel-inner"> -->
+      <!-- <div class="carousel-item active"> -->
+        <!-- <img src="https://wallpapercave.com/wp/wp11127527.jpg" class="d-block  w-100" alt="..."> -->
+      <!-- </div> -->
+      <!-- <div class="carousel-item"> -->
+        <!-- <img src="https://wallpapercrafter.com/sizes/2560x1440/69057-fields-tree-plain-nature.jpg"  class="d-block  w-100" alt="..."> -->
+      <!-- </div> -->
+      <!-- <div class="carousel-item"> -->
+        <!-- <img src="https://previews.123rf.com/images/ivantsov/ivantsov1503/ivantsov150301698/37379993-beautiful-green-forest.jpg"  class="d-block  w-100" alt="..."> -->
+      <!-- </div> -->
+    <!-- </div> -->
+    <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev"> -->
+      <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+      <!-- <span class="visually-hidden">Previous</span> -->
+    <!-- </button> -->
+    <!-- <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next"> -->
+      <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+      <!-- <span class="visually-hidden">Next</span> -->
+    <!-- </button> -->
+  <!-- </div> -->
+<!--  -->
+    <!-- Overview About Trees -->
+    <div class='overview'>
+        <h1>Importance Of Trees</h1>
+        <p>Trees are living beings, just like people and animals.
+          They give oxygen and take away carbon dioxide.
+          Trees make every place look beautiful.
+          Trees give us fruits, seeds and flowers that we enjoy eating.
+          Trees provide us with shade on hot and sunny days.
+          Trees are important for maintaining cool weather in the city.
+          In the forests, trees give shelter and food to different animals.
+          Trees provide us with timber for construction and other work.
+          Without trees, everything on the Earth will find it hard to survive.
+          Trees are our best friends.</p>
+      </div>
+
+      <!-- enderanged trees cards -->
+      <div class="main">
+        <div class="items">
+            <h1 id="Enderanged-Trees">Enderanged Trees</h1>
+            <!-- product card -->
+            <div class="main-prod">
+                <!-- img 1 -->
+<div class="Prod-card">
+    <img src="https://m.media-amazon.com/images/I/51CxOq9n41L.jpg" class="card-img" alt="">
+    <div class="card-detail">    
+        <h4 class="prod-title">Red Sandal Plant</h4>
+    <h4 class="prod-price">44</h4>
+    <h3 class="location"> Chennai</h3>
+</div>
+<button class="prod-btn">Add To Cart</button>
+</div>
+<!-- img 2 -->
+<div class="Prod-card">
+    <img src="https://4.imimg.com/data4/RT/FX/ANDROID-21949238/product-500x500.jpeg" class="card-img" alt="">
+    <div class="card-detail">    
+        <h4 class="prod-title">Sandal Plant</h4>
+    <h4 class="prod-price">54</h4>
+    <h3 class="location"> Chennai</h3>
+</div>
+<button class="prod-btn">Add To Cart</button>
+</div>
+
+<!-- img 3 -->
+<div class="Prod-card">
+    <img class="card-img" src="https://tiimg.tistatic.com/fp/2/007/584/grafted-agarwood-plant-for-outdoor-gardening-and-nursery--494.jpg"  alt="">
+    <div class="card-detail">    
+        <h4 class="prod-title">Agar Plant</h4>
+    <h4 class="prod-price">64</h4>
+    <h3 class="location"> Chennai</h3>
+</div>
+<button class="prod-btn">Add To Cart</button>
+</div>
+        </div>
+      </div>
+
+       <!-- garden Plants -->
+       <div class="main">
+        <div class="items">
+            <h1 id="Garden-Plants">Garden Plants</h1>
+            <!-- product card -->
+            <div class="main-prod">
+                <div class="Prod-card">
+                    <img src="https://nurserylive.com/cdn/shop/products/nurserylive-rose-white-plant-1_512x683.jpg?v=1634227466" class="card-img" alt="">
+                    <div class="card-detail">    
+                        <h4 class="prod-title">Rose Plant</h4>
+                    <h4 class="prod-price">34</h4>
+                    <h3 class="location"> Chennai</h3>
+                </div>
+                <button class="prod-btn">Add To Cart</button>
+                </div>
+                <!-- img 2 -->
+                <div class="Prod-card">
+    <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcS7ONq1_nn3aELmKnk4R-oaGb5EE-DqyFAO7ANNUvv_UyGzNNN9RIMTqk3u1ysdunPKtyWHpSRo4D9LX1E" class="card-img" alt="">
+    
+                    <div class="card-detail">    
+                        <h4 class="prod-title">Bougainvillea</h4>
+                    <h4 class="prod-price">34</h4>
+                    <h3 class="location"> Chennai</h3>
+                </div>
+                <button class="prod-btn">Add To Cart</button>
+                </div>
+                
+                <!-- img 3 -->
+                <div class="Prod-card">
+                    <img class="card-img" src="https://nurserylive.com/cdn/shop/products/nurserylive-g-african-marigold-yellow-plant-398336_512x512.jpg?v=1679749016"  alt="">
+                    <div class="card-detail">    
+                        <h4 class="prod-title">African Marigold</h4>
+                    <h4 class="prod-price">34</h4>
+                    <h3 class="location"> Chennai</h3>
+                </div>
+                <button class="prod-btn">Add To Cart</button>
+                </div>
+
+        </div>
+      </div>
+        <!-- Tree Seeds -->
+        <div class="main">
+            <div class="items">
+                <h1 id="Tree-Seeds">Tree Seeds</h1>
+                <!-- product card -->
+                <div class="main-prod">
+                    <div class="Prod-card">
+                        <img src="https://rukminim1.flixcart.com/image/850/1000/xif0q/plant-seed/9/t/k/22-sandalwood-tree-seeds-white-sandalwood-tree-seed-shreegandha-original-imagzzyky5cmzydf.jpeg?q=90" class="card-img" alt="">
+                        <div class="card-detail">    
+                            <h4 class="prod-title">Red Sandalwood</h4>
+                        <h4 class="prod-price">34</h4>
+                        <h3 class="location"> Chennai</h3>
+                    </div>
+                    <button class="prod-btn">Add To Cart</button>
+                    </div>
+                    <!-- img 2 -->
+                    <div class="Prod-card">
+                        <img src="https://i.etsystatic.com/20853122/r/il/91f4b2/2363849166/il_570xN.2363849166_3wfo.jpg" class="card-img" alt="">
+                        <div class="card-detail">    
+                            <h4 class="prod-title">Red Sandalwood</h4>
+                        <h4 class="prod-price">34</h4>
+                        <h3 class="location"> Chennai</h3>
+                    </div>
+                    <button class="prod-btn">Add To Cart</button>
+                    </div>
+                    
+                    <!-- img 3 -->
+                    <div class="Prod-card">
+                        <img class="card-img" src="https://rukminim2.flixcart.com/image/850/1000/kve530w0/plant-seed/6/t/v/100-21-rk-seeds-original-imag8a7svdbgmshs.jpeg?q=90"  alt="">
+                        <div class="card-detail">    
+                            <h4 class="prod-title">Red Sandalwood</h4>
+                        <h4 class="prod-price">34</h4>
+                        <h3 class="location"> Chennai</h3>
+                    </div>
+                    <button class="prod-btn">Add To Cart</button>
+                    </div>
+
+            </div>
+          </div>
+        <!-- meditional trees -->
+        <div class="main">
+            <div class="items">
+                <h1 id="Meditional-Trees">Meditional Trees</h1>
+                <!-- product card -->
+                <div class="main-prod">
+                    <div class="Prod-card">
+                        <img src="https://gardengram.in/cdn/shop/products/Amla-Indian-Gooseberry-Big-Fruit-Graft-Plant.jpg?v=1671171808" class="card-img" alt="">
+                        <div class="card-detail">    
+                            <h4 class="prod-title">Amla gooseberry </h4>
+                        <h4 class="prod-price">34</h4>
+                        <h3 class="location"> Chennai</h3>
+                    </div>
+                    <button class="prod-btn">Add To Cart</button>
+                    </div>
+                    <!-- img 2 -->
+                    <div class="Prod-card">
+                        <img src="https://gachwala.in/wp-content/uploads/2022/07/51DirYLs40L._SX569_.jpg" class="card-img" alt="">
+                        <div class="card-detail">    
+                            <h4 class="prod-title">Ajwain</h4>
+                        <h4 class="prod-price">34</h4>
+                        <h3 class="location"> Chennai</h3>
+                    </div>
+                    <button class="prod-btn">Add To Cart</button>
+                    </div>
+                    
+                    <!-- img 3 -->
+                    <div class="Prod-card">
+                        <img class="card-img" src="https://m.media-amazon.com/images/I/41g-kyRiVBL._AC_UF1000,1000_QL80_.jpg"  alt="">
+                        <div class="card-detail">    
+                            <h4 class="prod-title">Aloe Vera</h4>
+                        <h4 class="prod-price">34</h4>
+                        <h3 class="location"> Chennai</h3>
+                    </div>
+                    <button class="prod-btn">Add To Cart</button>
+                    </div>
+
+            </div>
+          </div>
+
+            <!--Organic manure -->
+       <div class="main">
+        <div class="items">
+            <h1 id="Organic-Manure">Organic Manure</h1>
+            <!-- product card -->
+            <div class="main-prod">
+                <div class="Prod-card">
+                    <img src="https://m.media-amazon.com/images/I/71wEqGwp0QL._AC_UF1000,1000_QL80_.jpg" class="card-img" alt="">
+                    <div class="card-detail">    
+                        <h4 class="prod-title">Neem Powder</h4>
+                    <h4 class="prod-price">34</h4>
+                    <h3 class="location"> Chennai</h3>
+                </div>
+                <button class="prod-btn">Add To Cart</button>
+                </div>
+                <!-- img 2 -->
+                <div class="Prod-card">
+                    <img src="https://www.bigbasket.com/media/uploads/p/xxl/40008671-4_2-natures-plus-organic-fertiliser.jpg" class="card-img" alt="">
+                    <div class="card-detail">    
+                        <h4 class="prod-title">Natures plus Organic</h4>
+                    <h4 class="prod-price">34</h4>
+                    <h3 class="location"> Chennai</h3>
+                </div>
+                <button class="prod-btn">Add To Cart</button>
+                </div>
+                
+                <!-- img 3 -->
+                <div class="Prod-card">
+                    <img class="card-img" src="https://plantic.in/image/greend1.jpg"  alt="">
+                    <div class="card-detail">    
+                        <h4 class="prod-title">Organic Green drop</h4>
+                    <h4 class="prod-price">34</h4>
+                    <h3 class="location"> Chennai</h3>
+                </div>
+                <button class="prod-btn">Add To Cart</button>
+                </div>
+
+        </div>
+      </div>
+
+        <!-- Country Vegitable Seeds -->
+        <div class="main">
+            <div class="items">
+                <h1 id="Country-Vegitable-Seeds">Country Vegitable Seeds</h1>
+                <!-- product card -->
+                <div class="main-prod">
+                    <div class="Prod-card">
+                        <img src="https://rukminim2.flixcart.com/image/850/1000/koad9jk0/plant-seed/s/5/c/45-green-chilli-seed-dream-garden-original-imag2s67dkymwrrs.jpeg?q=20" class="card-img" alt="">
+                        <div class="card-detail">    
+                            <h4 class="prod-title">chilli seed</h4>
+                        <h4 class="prod-price">34</h4>
+                        <h3 class="location"> Chennai</h3>
+                    </div>
+                    <button class="prod-btn">Add To Cart</button>
+                    </div>
+                    <!-- img 2 -->
+                    <div class="Prod-card">
+                        <img src="https://5.imimg.com/data5/SELLER/Default/2024/1/380572773/BT/JL/MW/34546546/country-tomato-seeds-500x500.jpg" class="card-img" alt="">
+                        <div class="card-detail">    
+                            <h4 class="prod-title">Tomotto seed</h4>
+                        <h4 class="prod-price">34</h4>
+                        <h3 class="location"> Chennai</h3>
+                    </div>
+                    <button class="prod-btn">Add To Cart</button>
+                    </div>
+                    
+                    <!-- img 3 -->
+                    <div class="Prod-card">
+                        <img class="card-img" src="https://www.jiomart.com/images/product/original/rvjlusfult/master-green-gardening-violet-brinjal-seed-50-per-packet-product-images-orvjlusfult-p595682731-0-202211270553.jpg?im=Resize=(1000,1000)"  alt="">
+                        <div class="card-detail">    
+                            <h4 class="prod-title">Brinjal seed</h4>
+                        <h4 class="prod-price">34</h4>
+                        <h3 class="location"> Chennai</h3>
+                    </div>
+                    <button class="prod-btn">Add To Cart</button>
+                    </div>
+            </div>
+          </div>
+
+          <!--Expensive Trees -->
+        <div class="main">
+            <div class="items">
+                <h1 id="Expensive-Trees">Expensive Trees</h1>
+                <!-- product card -->
+                <div class="main-prod">
+                    <div class="Prod-card">
+                        <img src="https://images.meesho.com/images/products/196081422/qslja_512.webp" class="card-img" alt="">
+                        <div class="card-detail">    
+                            <h4 class="prod-title">Agar Plant</h4>
+                        <h4 class="prod-price">34</h4>
+                        <h3 class="location"> Chennai</h3>
+                    </div>
+                    <button class="prod-btn">Add To Cart</button>
+                    </div>
+                    <!-- img 2 -->
+                    <div class="Prod-card">
+                        <img src="https://m.media-amazon.com/images/I/61w8TiG8QBL.jpg" class="card-img" alt="">
+                        <div class="card-detail">    
+                            <h4 class="prod-title">Karungali Plant</h4>
+                        <h4 class="prod-price">34</h4>
+                        <h3 class="location"> Chennai</h3>
+                    </div>
+                    <button class="prod-btn">Add To Cart</button>
+                    </div>
+                    
+                    <!-- img 3 -->
+                    <div class="Prod-card">
+                        <img class="card-img" src="https://kadiyamnursery.com/cdn/shop/products/swietenia-mahogani-mahogany-spanish-mahogany-kadiyam-nursery-1_700x700.jpg?v=1662198545"  alt="">
+                        <div class="card-detail">    
+                            <h4 class="prod-title">Mahogani</h4>
+                        <h4 class="prod-price">34</h4>
+                        <h3 class="location"> Chennai</h3>
+                    </div>
+                    <button class="prod-btn">Add To Cart</button>
+                    </div>
+            </div>
+          </div>
+
+          <!-- footer -->
+          <footer class="footer-1">
+  
+            <div class="contact">
+              <h1>Tree park</h1>
+            <p>connect with us</p>
+              <ul>
+                <li><a href="https://www.youtube.com/watch?v=2p6mbAuNsvo" target="new"  class="fa-brands fa-youtube"></a></li>
+                <li><a href="https://www.facebook.com/groups/274456249274060" target="new" class="fa-brands fa-facebook"></a></li>
+                <li><a href="https://www.linkedin.com/in/viveksankar2k1/" target="new" class="fa-brands fa-linkedin"></a></li>
+                <li><a href="#" class="fa-brands fa-twitter"></a></li>
+                <li><a href="https://www.instagram.com/viveksankar5/" target="new" class="fa-brands fa-instagram"></a></li>
+              </ul>
+            </div>
+          <br><br><br>
+          
+            <div class="footer-2">
+            <div class="product">
+            <div><li><a href="#"><b>Products</b></a></li></div>
+            <div><li><a href="#">Sell your Products</a></li></div>
+            <div><li><a href="#">Advertise</a></li></div>
+            <div><li><a href="#">Pricing</a></li></div>
+            <div><li><a href="#">Product Buisness</a></li></div>
+          </div>
+          
+          <div class="company">
+            <div><li><a href="#"><b>Company</b></a></li></div>
+            <div><li><a href="#">Complaint</a></li></div>
+            <div><li><a href="#">Complaint</a></li></div>
+            <div><li><a href="#">Affiliate Marketing</a></li></div>
+            <div><li><a href="#">Support</a></li></div>
+          </div>
+          
+          <div class="services">
+            <div><li><a href="#"><b>Services</b> </a></li></div>
+            <div><li><a href="#">Return</a></li></div>
+            <div><li><a href="#">Cash Back</a></li></div>
+            <div><li><a href="#">Affiliate Marketing</a></li></div>
+            <div><li><a href="#">Others</a></li></div>
+          </div>
+          
+          <div class="get-help">
+            <div><li><a href="#"><b>Get Help</b> </a></li></div>
+            <div><li><a href="#">Privacy Policy</a></li></div>
+            <div><li><a href="#">Terms</a></li></div>
+            <div><li><a href="#">Help Center</a></li></div>
+            <div><li><a href="#">login</a></li></div>
+          </div>
+          </div>
+          <div><p> copyright<i class="fa-solid fa-copyright"></i>  Tree Park 2023-2028</p></div>
+          </footer>
+    <!-- script link -->
+    <script src="./newlife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

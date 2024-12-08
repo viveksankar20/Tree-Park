@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Document</title>
+    <style>
+        .naver {
+            background-color: black;
+            color: aliceblue;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            font-size: xx-large;
+        }
+        .ourstory {
+            background-color: black;
+            color: aliceblue;
+        }
+        .imgs {
+            background-color: black;
+        }
+        .intro {
+            position: absolute;
+            padding: 250px;
+            padding-top: 200px;
+            color: rgb(255, 234, 0);
+        }
+        .contain {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .grid1 {
+            grid-column: span 2;
+            background-image: url(https://images.practicaladultinsights.com/small-vegetable-business.jpg);
+            background-size: cover;
+            border-radius: 5px;
+            background-repeat: no-repeat;
+        }
+        .grid2 {
+            grid-column: span 1;
+            background-color: aliceblue;
+            padding: 10px;
+            font-size: larger;
+            line-height: 30px;
+        }
+        /* footer */
+        .footer-1 {
+            background-color: black;
+            color: white;
+            padding: 1rem;
+        }
+        .footer-1 .footer-2 {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+        .footer-1 .contact {
+            text-align: center;
+        }
+        .footer-1 .contact ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .footer-1 .contact {
+            text-align: center;
+        }
+        .footer-1 .contact ul li {
+            padding: 1rem;
+            list-style: none;
+            font-size: larger;
+        }
+        .footer-1 .contact ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: larger;
+        }
+        .footer-1 .footer-2, .product ul li, .services ul li, .company ul li, .get-help ul li {
+            list-style: none;
+            color: white;
+        }
+        .footer-1 .footer-2, .product div > li a, .services div > li a, .company div > li a, .get-help div > li a {
+            text-decoration: none;
+            color: white;
+        }
+        .footer-1 div > p {
+            text-align: center;
+            padding-top: 10px;
+        }
+        .footer-1 .contact ul li a:hover {
+            color: red;
+        }
+        .footer-1 .footer-2 div > li a:hover {
+            color: orange;
+        }
+        .footer-1 .footer-2 div > li :first-child {
+            font-size: larger;
+        }
+
+        /* Media queries for responsiveness */
+        @media screen and (max-width: 768px) {
+            .intro {
+                padding: 150px; /* Adjust padding for smaller screens */
+                padding-top: 100px;
+            }
+            .grid1, .grid2 {
+                grid-column: span 3; /* Adjust grid columns for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="naver">About Us</h1>
+    <div class="main">
+        <!-- main image content -->
+        <h1 class="intro"> Enderanged Rare Trees And Plants <br><br> World 100% Pure Organic And Rare Country Plants</h1>
+        <div class="imgs">
+            <img src="https://cdn.wallpapersafari.com/68/96/59HNxC.jpg" width="100%" height="500px" alt="">
+        </div>
+        <center><h1 class="ourstory">Our Tree Park  Organic Nursary Story</h1></center>  
+        <div class="contain">
+            <div class="grid1"></div>
+            <!-- grid 2 -->
+            <div class="grid2">
+                <h1>Beginning</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti a, iure totam vero beatae odio obcaecati quo eligendi autem voluptatibus quia inventore debitis numquam similique neque? Non commodi neque culpa!</p>
+                <h1>Our Steps</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sequi nulla, laborum, nihil totam quas consequatur nisi quis inventore similique mollitia deleniti odit optio enim esse reprehenderit. Veritatis, quisquam soluta?</p>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer class="footer-1" style="height: 400px;">
+        <div class="contact">
+            <h1>Tree park</h1>
+            <p>connect with us</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=2p6mbAuNsvo" target="new"  class="fa-brands fa-youtube"></a></li>
+                <li><a href="https://www.facebook.com/groups/274456249274060" target="new" class="fa-brands fa-facebook"></a></li>
+                <li><a href="https://www.linkedin.com/in/viveksankar2k1/" target="new" class="fa-brands fa-linkedin"></a></li>
+                <li><a href="#" class="fa-brands fa-twitter"></a></li>
+                <li><a href="https://www.instagram.com/viveksankar5/" target="new" class="fa-brands fa-instagram"></a></li>
+            </ul>
+        </div>
+        <br><br><br>
+        <div class="footer-2">
+            <div class="product">
+                <div><li><a href="#">Products</a></li></div>
+                <div><li><a href="#">Sell your Products</a></li></div>
+                <div><li><a href="#">Advertise</a></li></div>
+                <div><li><a href="#">Pricing</a></li></div>
+                <div><li><a href="#">Product Business</a></li></div>
+            </div>
+            <div class="company">
+                <div><li><a href="#"> Company</a></li></div>
+                <div><li><a href="#">Complaint</a></li></div>
+                <div><li><a href="#">Complaint</a></li></div>
+                <div><li><a href="#">Affiliate Marketing</a></li></div>
+                <div><li><a href="#">Support</a></li></div>
+            </div>
+            <div class="services">
+                <div><li><a href="#"> Services</a></li></div>
+                <div><li><a href="#">Return</a></li></div>
+                <div><li><a href="#">Cash Back</a></li></div>
+                <div><li><a href="#">Affiliate Marketing</a></li></div>
+                <div><li><a href="#">Others</a></li></div>
+            </div>
+            <div class="get-help">
+                <div><li><a href="#"> Get Help</a></li></div>
+                <div><li><a href="#">Privacy Policy</a></li></div>
+                <div><li><a href="#">Terms</a></li></div>
+                <div><li><a href="#">Help Center</a></li></div>
+                <div><li><a href="#">Login</a></li></div>
+            </div>
+        </div>
+        <div><p>Copyright <i class="fa-solid fa-copyright"></i> Tree Park 2023-2028</p></div>
+    </footer>
+    <script></script>
+</body>
+</html>

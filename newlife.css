@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Poppins:ital,wght@1,200;1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; 
+    box-sizing: border-box;
+}
+
+nav {
+    width: 100%;
+}
+
+ul li {
+    font-family: 'Poppins', sans-serif; 
+    list-style: none;
+    padding-right: 20px;
+    font-size: larger;
+}
+
+ul li a:hover {
+    color: #a7931f;
+    transition: 1s;
+}
+
+ul li a {
+    text-decoration: none;
+    transition: 1s;
+    color: white;
+    font-weight: lighter;
+    font-size: large;
+}
+
+/* Add to cart */
+.cart-box {
+    font-family: sans-serif;
+    width: 100%;
+    position: fixed;
+    display: none;
+    margin-top: -70px;
+}
+
+.total-head {
+    margin-top: 10px;
+}
+
+.total-btn {
+    background-color: blue;
+    border-style: none;
+    color: white;
+    padding: 5px;
+    font-size: larger;
+    border-radius: 5px;
+}
+
+.cart-main {
+    width: 80%;
+    background-color: #fff;
+    padding: 10px;
+    overflow-y: scroll;
+    height: 500px;
+    border: 10px solid rgb(158, 158, 157);
+    background-color: rgb(254, 255, 254);
+}
+
+.cart-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.head-img {
+    width: 50%;
+    height: 70px;
+    border-radius: 10px;
+}
+
+.cart-product {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    border: 2px solid rgb(14, 14, 14);
+    padding: 2px;
+}
+
+.cart-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    border: 2px solid rgb(130, 130, 130);
+}
+
+.cart-product input {
+    width: 30px;
+}
+
+/* Search */
+.search {
+    margin-top: 60px;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.search input[type="text"] {
+    width: 400px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search button {
+    background-color: #4e99e9;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    top: 0;
+    right: 0;
+    transition: .9s ease;
+}
+
+.search button[type="submit"]:hover {
+    transform: scale(1.1);
+    color: rgb(255, 255, 255);
+    background-color: blue;
+}
+
+/* Add to cart */
+.cart {
+    position: relative;
+}
+
+#cart {
+    position: absolute;
+    color: black;
+    background-color: aliceblue;
+    margin-left: 40px;
+    margin-top: -5px;
+    font-size: small;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 2px;
+}
+
+/* Base styles */
+
+.logbox {
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    width: 80%; /* Adjust width as needed */
+    padding: 20px;
+    box-shadow: 5px 5px 5px 5px gainsboro;
+    margin: 20px auto; /* Center horizontally */
+    font-size: larger;
+    position: fixed;
+    display: none;
+    background-color: white;
+    margin-top: -100px;
+}
+
+.logbox input {
+    padding-left: 10px;
+}
+
+/* Animation */
+.animate {
+    animation: animatezoom 0.6s;
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+form {
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px; /* Set maximum width */
+    margin: 0 auto; /* Center horizontally */
+}
+
+.logbox input[type=text],
+.logbox input[type=password] {
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+}
+
+form .log-btn {
+    background-color: rgb(24, 185, 24);
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+}
+
+form .log-btn a {
+    text-decoration: none;
+    font-size: large;
+    color: aliceblue;
+}
+
+.log-end {
+    font-size: medium;
+    display: flex;
+    width: 100%;
+    max-width: 400px; /* Set maximum width */
+    margin: 10px auto; /* Center horizontally */
+    justify-content: space-evenly;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .logbox {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+
+    form {
+        max-width: 90%; /* Adjust maximum width for smaller screens */
+    }
+}
+
+
+.overview {
+    font-family: 'Poppins', sans-serif; 
+    background-color: white;
+    line-height: 30px;
+    padding: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.overview h1 {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.overview p {
+    font-size: large;
+    padding-top: 20px;
+}
+
+/* Upload products */
+/* Upload product */
+.outer-upload {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    margin-top: -80px;
+    display: none;
+    background-color: rgb(247, 247, 255);
+}
+
+.upload-title,
+.upload-price,
+.upload-location {
+    margin-bottom: 20px;
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.upload-btn {
+    width: 100%;
+    font-size: large;
+    background-color: #4e99e9;
+    color: #fff;
+    border-radius: 10px;
+    border-style: none;
+    padding: 10px;
+}
+
+.upload-product input::placeholder {
+    margin-left: 30px;
+}
+
+.main-upload {
+    width: 100%;
+    text-align: center;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+.main-upload form{
+    width: 100%;
+    border: 1px solid black;
+   
+}
+
+/* Card product */
+.main {
+    padding-top: 10px;
+}
+
+.main h1 {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.main-prod {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    font-family: 'poppins', 'sans-sarif';
+}
+
+/* New Prod design */
+.Prod-card {
+    background-color: whitesmoke;
+    height: fit-content;
+    margin-top: 10px;
+    overflow: hidden;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 5px rgb(0, 0, 0);
+    box-shadow: 0 0 5px #303030;
+    transition: 1s;
+}
+
+.card-img {
+    width: 300px;
+    height: 300px;
+    transition: 1s;
+}
+
+.Prod-card img:hover {
+   transform: scale(1.1);
+    transition: 1s;
+}
+
+.card-detail {
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 30px;
+}
+
+.prod-btn {
+    width: 80%;
+    padding: 7px;
+    font-size: larger;
+    background-color: rgb(28, 229, 32);
+    border-style: none;
+    color: white;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.Prod-card {
+    text-align: center;
+}
+
+.prod-btn:hover {
+    background-color: #0953a2;
+}
+
+/* Footer */
+.footer-1 {
+    font-family: 'Poppins', sans-serif; 
+    background-color: black;
+    color: white;
+    padding: 2rem;
+}
+
+.footer-1 .footer-2 {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.footer-1 .contact {
+    text-align: center;
+}
+
+.footer-1 .contact ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-1 .contact {
+    text-align: center;
+}
+
+.footer-1 .contact ul li {
+    padding: 1rem;
+    list-style: none;
+    font-size: larger;
+}
+
+.footer-1 .contact ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+}
+
+.footer-1 .footer-2,
+.product ul li,
+.services ul li,
+.company ul li,
+.get-help ul li {
+    list-style: none;
+    color: white;
+}
+
+.footer-1 .footer-2,
+.product div> li a,
+.services div> li a,
+.company div> li a,
+.get-help div> li a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-1 div> p {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.footer-1 .contact ul li a:hover {
+    color: red;
+}
+
+.footer-1 .footer-2 div>li a:hover {
+    color: orange;
+}
+
+.product,
+.company,
+.services,
+.get-help {
+    padding: 10px;
+}
+
+.footer-1 .footer-2 div>li :first-child {
+    font-size: larger;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .card-img {
+        width: 100%; /* Make images responsive */
+        height: auto;
+    }
+    
+    .main-upload {
+        width: 90%; /* Adjust width for smaller screens */
+        margin: 0 auto; /* Center horizontally */
+    }
+    
+    .Prod-card {
+        width: 90%; /* Adjust width for smaller screens */
+        margin: 10px auto; /* Center horizontally */
+    }
+    
+    .overview h1 {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+    
+    /* Add more responsive styles as needed */
+}
+
+@media screen and (min-width: 769px) {
+    .main-upload {
+        width: 400px; /* Reset width for larger screens */
+        margin: 0 auto; /* Center horizontally */
+    }
+    
+    .Prod-card {
+        width: calc(33.33% - 20px); /* Adjust width for larger screens */
+    }
+    
+    /* Add more responsive styles as needed */
+}
